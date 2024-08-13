@@ -1,12 +1,15 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+
 body, html {
     height: 5000px;
+    font-family: 'Grey-Qo', 'Times New Roman', Times, serif;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     overflow-x: hidden; /* Prevent scrollbars from appearing */
 }
+
 
 .image-section {
     position: absolute;
@@ -27,8 +30,8 @@ body, html {
     height: 100%;
     object-fit: cover; /* Cover the container without distorting */
 
-    // object-fit: contain; /* Ensure the image fits within the container without being cropped */
 }
+
 
 .overlay {
     position: absolute;
@@ -85,3 +88,42 @@ body, html {
     }
 }
 
+.navbar-nav .nav-link {
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.1); /* Increase the size by 10% */
+}
+#EWB_front_text {
+    margin-bottom: 40px;
+    text-align: center; /* Center the text inside the container */
+}
+
+.join-us-box {
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: white; /* White background for the box */
+    text-align: center;
+}
+
+.join-us-box p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: black; /* Black text */
+    text-align: center;
+
+}
+
+.white-text-box {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%; /* Adjust the width as needed */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px; /* Optional max width */
+}
