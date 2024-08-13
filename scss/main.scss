@@ -2,17 +2,21 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 body, html {
-    height: 100%;
+    height: 5000px;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
-    overflow: hidden; /* Prevent scrollbars from appearing */
+    overflow-x: hidden; /* Prevent scrollbars from appearing */
 }
 
 .image-section {
-    position: relative;
+    position: absolute;
+    top: 0;
     width: 100vw; /* Use viewport width to ensure it spans the entire width */
     height: 100vh; /* Use viewport height to ensure it spans the entire height */
     overflow: hidden; /* Ensure no overflow */
+    filter: brightness(2);
+    z-index: -1;
+
 }
 
 .bg-image {
@@ -43,3 +47,41 @@ body, html {
     font-size: 3rem;
     text-align: center;
 }
+
+.navbar_logo1 {
+    width: 250px; /* Default size for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    transition: width 0.3s ease; /* Smooth transition when resizing */
+    margin-left: 20px; /* Adjust this value to set the distance from the left side */
+
+}
+
+@media (max-width: 992px) {
+    /* Scale down logo for medium screens */
+    .navbar_logo1 {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Scale down logo further for small screens */
+    .navbar_logo1 {
+        width: 150px;
+    }
+
+    /* Hide original navbar items and use dropdown instead */
+    .navbar-nav {
+        display: none;
+    }
+
+    /* Create a single dropdown menu with all items */
+    #navbarNavDropdown .navbar-nav {
+        display: block;
+    }
+
+    #navbarNavDropdown .navbar-nav .nav-item {
+        display: block;
+        text-align: center;
+    }
+}
+
