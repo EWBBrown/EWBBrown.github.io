@@ -165,7 +165,10 @@ body, html {
  .parallax-image2 {
     background-image: url('../assets/front_page/ERC2.jpg');
     filter: brightness(1);
-
+}
+.projects_parallax_image {
+    background-image: url('../assets/front_page/PROJECTS.jpg');
+    filter: brightness(1);
 }
 
  .parallax-text-section {
