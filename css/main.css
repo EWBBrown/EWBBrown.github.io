@@ -5,22 +5,38 @@
 body, html {
     height: 5000px;
     font-family: 'Grey-Qo', 'Times New Roman', Times, serif;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    overflow-x: hidden; /* Prevent scrollbars from appearing */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* prevent scrollbars from appearing */
 }
 
+.banner-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
 
+/* Centered content in header */
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+/* 
 .image-section {
     position: absolute;
     top: 0;
-    width: 100vw; /* Use viewport width to ensure it spans the entire width */
-    height: 100vh; /* Use viewport height to ensure it spans the entire height */
-    overflow: hidden; /* Ensure no overflow */
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden;
     filter: brightness(2);
     z-index: -1;
 
-}
+}*/
 
 .bg-image {
     position: absolute;
@@ -52,12 +68,13 @@ body, html {
 }
 
 .navbar_logo1 {
-    width: 150px; /* Default size for larger screens */
-    height: auto; /* Maintain aspect ratio */
-    transition: width 0.3s ease; /* Smooth transition when resizing */
-    margin-left: 20px; /* Adjust this value to set the distance from the left side */
+    width: 100px; 
+    height: auto; /* maintain aspect ratio */
+    transition: width 0.3s ease; /* smooth transition when resizing */
+    margin-left: 20px;
 
 }
+
 .navbar {
    z-index: 1;
 }
@@ -136,8 +153,6 @@ body, html {
 }
 
 
-
-
 .white-text-box {
     background-color: white;
     color: black;
@@ -158,18 +173,6 @@ body, html {
      width: 100%;
      height: 100vh;
  }
-
- .parallax-image {
-     background-image: url('../assets/front_page/ERC.jpg');
- }
- .parallax-image2 {
-    background-image: url('../assets/front_page/ERC2.jpg');
-    filter: brightness(1);
-}
-.projects_parallax_image {
-    background-image: url('../assets/front_page/PROJECTS.jpg');
-    filter: brightness(1);
-}
 
  .parallax-text-section {
      background-color: white;
@@ -211,12 +214,4 @@ body, html {
     height: 45px; /* Adjust height to match the input */
     padding: 0 20px; /* Add horizontal padding for the button */
 }
- /* Additional styling */
- body,
- html {
-     margin: 0;
-     padding: 0;
-     width: 100%;
-     height: 100%;
-     overflow-x: hidden;
- }
+
