@@ -43,17 +43,13 @@ body, html {
     margin-left: 20px;
 }
 
+
 .navbar {
-    position: relative; /* Ensures it stays relative to its container */
-    top: 0;
     width: 100%;
-    z-index: 1; /* Ensures it stays above other content */
-    border: none; /* Removes any default border */
-    background-color: transparent; /* Keeps navbar transparent */
+    z-index: 1;
+    border: none;
+    background-color: transparent;
 }
-
-
-
 
 
 /* Header Section Styles */
@@ -61,6 +57,7 @@ body, html {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    position: relative;
 }
 .banner-image2 {
     width: 100vw;
