@@ -45,10 +45,15 @@ body, html {
 
 
 .navbar {
+    position: absolute;
+    /* This makes the navbar overlap the background */
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 1;
-    border: none;
+    z-index: 10;
+    /* Ensure the navbar is on top of other elements */
     background-color: transparent;
+    /* Ensure it is transparent */
 }
 
 
@@ -58,13 +63,17 @@ body, html {
     height: 100vh;
     object-fit: cover;
     position: relative;
+    z-index: 1;
+    /* Ensure the image is behind the content */
 }
+
 .banner-image2 {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
 }
 
+/* To center the entire content, including the button */
 .header-content {
     position: absolute;
     top: 50%;
@@ -73,6 +82,12 @@ body, html {
     width: 100%;
     text-align: center;
     color: white;
+    z-index: 10;
+    /* Ensure content is in front of the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -114,15 +129,15 @@ body, html {
 }
 
 .join-us-btn {
-    background-color: #ffffff; /* Initial background color */
+    background-color: #ffffff;
     color: rgb(0, 0, 0);
-    margin-top: 200px;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+    /* Reduce the margin */
 }
 
 /* Hover effect for slightly transparent background */
@@ -137,14 +152,23 @@ body, html {
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 50vh;
 }
 
 .parallax-text-section {
     background-color: white;
     padding: 50px 0;
     z-index: 1;
+    /* Remove any fixed height */
     margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Ensure it doesn't limit based on height */
+.parallax-text-section .container {
+    max-width: 100%;
+    /* Keep container fluid */
+    padding: 50px 20px;
+    /* Adjust padding to your liking */
 }
 
 /* 2nd Parallax Image Section */
